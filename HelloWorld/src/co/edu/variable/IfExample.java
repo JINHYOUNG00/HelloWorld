@@ -1,6 +1,6 @@
 package co.edu.variable;
 
-public class ifExample {
+public class IfExample {
 
 	public static void main(String[] args) {
 		int myAge = 19;
