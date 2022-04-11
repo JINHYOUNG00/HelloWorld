@@ -19,7 +19,7 @@ public class Score {
 		
 		sum = kor + eng + his;
 		avg = sum / 3.0;
-		
+		// 최고점 구하는 방식(kor, eng, his) 비교
 		maxValue = kor;
 		if(maxValue < eng) {
 			maxValue = eng;
@@ -31,9 +31,3 @@ public class Score {
 		System.out.printf("합은 %3d이고 평균은 %.2f이고 최고점은 %3d이다.", sum, avg, maxValue);
 	}
 }
-//		if(kor > eng, his) {
-//			maxs = kor;
-//		}else if(eng > kor, his)
-//			
-//	}
-
