@@ -11,6 +11,10 @@ public class Homework2 {
 		int money = scn.nextInt();
 		System.out.println("물건의 가격을 입력하시오.");
 		int price = scn.nextInt();
+		double tax = price-(price /1.1);
+		int change = money - price;
+		
+		System.out.printf("내신 금액 %6d원 부가세 %.0f원을 포함한 물건가격 %6d원 잔돈 %d원입니다.", money , tax, price, change);
 	}
 
 }
