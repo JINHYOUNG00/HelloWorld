@@ -12,11 +12,11 @@ public class Homework2 {
 		String input = scn.nextLine();
 		
 		int user = 0;
-		if (input == "가위") {
+		if (input.equals("가위")) {
 			user = 1;
-		} else if (input == "바위") {
+		} else if (input.equals("바위")) {
 			user = 2;
-		} else if (input == "보") {
+		} else if (input.equals("보")) {
 			user = 3;
 		}
 		String command = "";
@@ -53,7 +53,7 @@ public class Homework2 {
 			if (computer == 2) {
 				System.out.println("나 => " + input + " pc => " + command);
 				System.out.println("You win.");
-			} else if (computer == 2) {
+			} else if (computer == 3) {
 				System.out.println("나 => " + input + " pc => " + command);
 				System.out.println("drow");
 			} else {
@@ -64,6 +64,5 @@ public class Homework2 {
 			System.out.println("잘못 입력하였습니다.");
 		}
 
-		System.out.println(computer);
 	}
 }

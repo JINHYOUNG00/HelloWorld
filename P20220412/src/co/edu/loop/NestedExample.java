@@ -35,24 +35,36 @@ public class NestedExample {
 //			}
 //			System.out.println();
 //		}
-		
-		for(int i =1; i<=10; i++) {
-			for(int j=1; j <= 10; j++) {
-				//i,j > 5 * 
-				if(i+j >= 11) {
-					System.out.print("*");
-				} else {
-					System.out.print(" ");
-				}
+
+//    *
+//   **
+//  ***		
+// ****		
+//*****		
+//		for(int i =1; i<=5; i++) {
+//			for(int j=1; j <= 5; j++) {
+//				//i,j > 5  
+//				if(i+j >= 6) {
+//					System.out.print("*");
+//				} else {
+//					System.out.print(" ");
+//				}
+//			}
+//			System.out.println();
+//		}
+
+//    *				공백 1234 * 5
+//   ***			공백 123 * 456	
+//  *****			공백 12 * 34567  
+// ******* 			공백 1 * 2345678
+//*********			공백  * 123456789
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 0; j <= 9; j++) {
 				
-					
+				
 			}
-			System.out.println();
 		}
-		
-		
-		
-		
+
 	}
 
 }
