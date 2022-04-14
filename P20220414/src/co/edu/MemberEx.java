@@ -2,7 +2,7 @@ package co.edu;
 
 import java.util.Scanner;
 
-public class MenberEx {
+public class MemberEx {
 
 	public static void main(String[] args) {
 
