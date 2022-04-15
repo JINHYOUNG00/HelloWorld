@@ -121,6 +121,8 @@ public class AccountApp {
 			if (account != null) {
 				account.showInfo();
 			}
+			
+			
 //			for (Board board : boards) {
 //				if(board != null) {
 //					board.getInfo();
