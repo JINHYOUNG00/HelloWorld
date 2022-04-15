@@ -1,4 +1,4 @@
-package co.edu.App;
+package co.edu.app;
 
 public class Account {
 	//필드 : S 계좌번호, S 예금주, I 잔액

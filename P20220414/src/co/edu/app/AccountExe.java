@@ -1,4 +1,4 @@
-package co.edu.App;
+package co.edu.app;
 
 public class AccountExe {
 
