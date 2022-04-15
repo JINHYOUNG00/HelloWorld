@@ -27,6 +27,8 @@ public class CalExample {
 		result2 = c1.avg(10, 20, 30, 40, 50, 60,70);
 		System.out.println(result2);
 		
+		Math.random();
+		
 		
 		
 	}

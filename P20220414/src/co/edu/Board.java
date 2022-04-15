@@ -10,6 +10,7 @@ public class Board {
 	private int searchCnt = 0;
 	
 	// 생성자.
+	
 	public Board(int boardNo, String title, String content, String writer) {
 		this.boardNo = boardNo;
 		this.title = title;
@@ -75,6 +76,12 @@ public class Board {
 					"내용 : %-30s\n" +
 					"==================================================\n";
 		System.out.printf(info ,this.boardNo, this.writer , this.title, this.searchCnt, this.content);
+	}
+
+	@Override // 오버라이딩: 부모클래스 toString -> 자식클래스가 재정의 //toString은 Object 클래스의 매소드 //어노테이션
+	public String toString() {
+		return "Board [boardNo=" + boardNo + ", title=" + title + ", content=" + content + ", writer=" + writer
+				+ ", searchCnt=" + searchCnt + "]";
 	}
 	
 	

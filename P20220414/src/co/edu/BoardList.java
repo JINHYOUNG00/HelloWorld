@@ -68,17 +68,39 @@ public class BoardList {
 		return null;
 	}
 	// 작성자 조회만들기
-	public Board[] getWriteList(String Wname) {
-		for (int i = 0; i < boards.length; i++) {
-			if (Wname.equals(boards[i].getWriter())) {
-				return boards[i];
+	
+//	public Board[] getWriterList(String Wname) {
+//		for (int i = 0; i < boards.length; i++) {
+//			if (Wname.equals(boards[i].getWriter())) {
+//				boards[i].getInfo();
+//				return boards;
+//			}
+//		}
+//		return null;
+//	} 내가 해본것
+	public Board[] getWriterList(String Wname) {
+		Board[] sBoard = new Board[5];
+		for(int i=0; i<boards.length;i++) { // 찾을 대상 배열
+			if(boards[i] != null && boards[i].getWriter().equals(Wname)){
+				for(int j = 0; j<sBoard.length;j++) { // 이름 조회 반환 배열
+					if (sBoard[j]==null) {
+						sBoard[j] = boards[i];
+						break;
+					}
+				}
+						
 			}
 		}
-		return null;
+		return sBoard;
 	}
 	
-	
 
+	
+	
+	
+	
+	
+	
 	// 게시글 목록
 	public Board[] boardList() {
 		return boards;
