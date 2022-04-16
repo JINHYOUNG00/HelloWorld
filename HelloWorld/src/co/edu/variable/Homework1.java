@@ -9,7 +9,7 @@ public class Homework1 {
 		Scanner scn = new Scanner(System.in);
 		System.out.println("오렌지의 수를 입력하시오.");
 		int org = scn.nextInt();
-		
+		int org2 = org;
 		int box1 = 10;
 		int box2 = 5;
 		
@@ -24,7 +24,7 @@ public class Homework1 {
 		} else {
 			x5box2 = x5box;
 		}
-		System.out.printf("%3d개의 오렌지는 10개 박스 %2d개, 5개 박스 %2d개에 담을 수 있다.",org, x10box, x5box2);
+		System.out.printf("%3d개의 오렌지는 10개 박스 %2d개, 5개 박스 %2d개에 담을 수 있다.",org2, x10box, x5box2);
 	}
 	
 }

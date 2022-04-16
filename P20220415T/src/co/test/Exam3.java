@@ -28,35 +28,12 @@ public class Exam3 {
 				intAry2[i] = intAry[i];
 				}
 			}
-		
-	
-		
-		
+		for (int i = 0 ; i< intAry.length; i++) {
+			System.out.println(intAry[i]);
+		}
 		System.out.println();
-		System.out.println(intAry[0]);
-		System.out.println(intAry[1]);
-		System.out.println(intAry[2]);
-		System.out.println(intAry[3]);
-		System.out.println(intAry[4]);
-		System.out.println(intAry[5]);
-		System.out.println(intAry[6]);
-		System.out.println(intAry[7]);
-		System.out.println(intAry[8]);
-		System.out.println(intAry[9]);
-
-		System.out.println();
-		System.out.println(intAry2[0]);
-		System.out.println(intAry2[1]);
-		System.out.println(intAry2[2]);
-		System.out.println(intAry2[3]);
-		System.out.println(intAry2[4]);
-		System.out.println(intAry2[5]);
-		System.out.println(intAry2[6]);
-		System.out.println(intAry2[7]);
-		System.out.println(intAry2[8]);
-		System.out.println(intAry2[9]);
-		
-		
-		
+		for (int i = 0 ; i< intAry2.length; i++) {
+			System.out.println(intAry2[i]);
+		}
 	}
 }
