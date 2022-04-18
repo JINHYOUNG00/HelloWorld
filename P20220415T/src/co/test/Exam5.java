@@ -23,7 +23,6 @@ public class Exam5 {
 			}
 			scn.nextLine();
 			if (menu == 1) {
-				createMember();
 			} else if (menu == 2) {
 				System.out.println("수정할 이름 입력>>>");
 				 
