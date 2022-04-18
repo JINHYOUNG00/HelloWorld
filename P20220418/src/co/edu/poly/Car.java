@@ -1,10 +1,10 @@
 package co.edu.poly;
 
 public class Car {
-	Tire frontLeft = new Tire("앞왼쪽", 6);
-	Tire frontRight = new Tire("앞오른쪽", 2);
-	Tire backLeft = new Tire("뒤왼쪽", 3);
-	Tire backRight = new Tire("뒤오른쪽", 4);
+	Tire frontLeft = new Tire("전방좌측", 6);
+	Tire frontRight = new Tire("전방우측", 2);
+	Tire backLeft = new Tire("후방좌측", 3);
+	Tire backRight = new Tire("후방우측", 4);
 	
 	
 	public int run() {
