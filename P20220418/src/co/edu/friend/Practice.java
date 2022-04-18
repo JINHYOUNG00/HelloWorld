@@ -23,7 +23,7 @@ public class Practice {
 		for (int i = 0; i < intAry.length; i++) {
 			System.out.println(intAry[i]);
 		}
-//		System.out.println("[*],[*],[*],[*],[*]");
+		System.out.println("[*],[*],[*],[*],[*]");
 		for (int i = 0; i < intAry.length; i++) {
 			System.out.println("5가 위치한 곳을 입력하세요");
 			int input = scn.nextInt();
@@ -36,19 +36,42 @@ public class Practice {
 					System.out.println("오답입니다.");
 					for (int j = 0; j<5; j++) {
 						if (j+1 == 1) {
-							intAry2 = intAry;
+							if(intAry[j]!=0) {
+							intAry2[j] = intAry[j];
 							System.out.print("["+ intAry2[j]+"]");
-						} else 
+							} else if (intAry[j]==0) {
 							System.out.print("[*]");
-					}
-					for (int j = 0; j<5; j++) {
-						if (j+1 == 2) {
-							intAry2 = intAry;
+							}
+						} else if (j+1 == 2) {
+							if(intAry[j]!=0) {
+							intAry2[j] = intAry[j];
 							System.out.print("["+ intAry2[j]+"]");
-						} else 
+							} else {
 							System.out.print("[*]");
+							}
+						} else if (j+1 == 3) {
+							if(intAry[j]!=0) {
+							intAry2[j] = intAry[j];
+							System.out.print("["+ intAry2[j]+"]");
+							} else {
+							System.out.print("[*]");
+							}
+						} else if(j+1 == 4) {
+							if(intAry[j]!=0) {
+							intAry2[j] = intAry[j];
+							System.out.print("["+ intAry2[j]+"]");
+							} else {
+							System.out.print("[*]");
+							}
+						} else if (j+1 == 5) {
+							if(intAry[j]!=0) {
+							intAry2[j] = intAry[j];
+							System.out.print("["+ intAry2[j]+"]");
+							} else {
+							System.out.print("[*]");
+							}
+						}  
 					}
-					
 					System.out.println();
 //					if (input == 1) {
 //						intAry2 = intAry;
