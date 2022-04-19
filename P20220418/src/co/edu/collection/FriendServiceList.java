@@ -12,18 +12,29 @@ public class FriendServiceList implements FriendService { // 인터페이스 Fri
 	ArrayList friends = new ArrayList();
 
 	@Override
-	public void addFriend(Friend friend) {
+	public void addFriend(Friend friend) { //newFriend
 		
-
-		Friend a = new Friend(name, phoneNum);
 		for (int i = 0; i < friends.size(); i++) {
-			friends.add(a);
+			friends.add(friend);
 			break;
 		}
 	}
 
 	@Override
 	public void modFriend(Friend friend) {
+		System.out.print("수정될 친구 이름=> ");
+		String fName2 = scn.nextLine();
+		System.out.print("수정될 친구 연락처=> ");
+		String fPhone2 = scn.nextLine();
+		Friend modFriend = new Friend(fName2, fPhone2);
+		
+		for(int i=0;i<friends.size();i++) {
+			if(friends.get(i).equals(friend)) {
+				friends.set(i, modFriend);
+			}
+			System.out.println("수정 완료");
+			System.out.println();
+		}
 
 	}
 
@@ -42,7 +53,7 @@ public class FriendServiceList implements FriendService { // 인터페이스 Fri
 	public Friend findFriend(String name) {
 		for (int i=0;i<friends.size();i++) {
 			if (friends.get(i).equals(name)) {
-				System.out.println(friends.get(i));
+				return (Friend) friends.get(i); //System.out.println(friends.get(i)) 이전 입력(오류);
 			}
 		}
 		return null;

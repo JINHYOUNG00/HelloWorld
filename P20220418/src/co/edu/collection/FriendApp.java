@@ -11,8 +11,8 @@ public class FriendApp {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 
-		FriendService service = new FriendServiceArray();
-//		FriendService service = new FriendServiceList();
+//		FriendService service = new FriendServiceArray();
+		FriendService service = new FriendServiceList();
 
 		// 추가, 수정, 삭제, 조회 => 컨트롤 역할
 		while (true) {
@@ -30,9 +30,9 @@ public class FriendApp {
 				service.addFriend(newFriend);
 				
 			} else if (menu == 2) {
-				System.out.print("친구 이름 => ");
+				System.out.print("수정할 친구 이름 => ");
 				String name = scn.nextLine();
-				System.out.print("추가할 친구 연락처=> ");
+				System.out.print("수정할 친구 연락처=> ");
 				String PhoneNum = scn.nextLine();
 				
 				Friend modFriend = new Friend(name, PhoneNum);
@@ -41,11 +41,20 @@ public class FriendApp {
 			} else if (menu == 3) {
 				System.out.println("삭제할 친구 이름=> ");
 				String name = scn.nextLine();
-				service.remFriend(null);
+				service.remFriend(name);
 			} else if (menu == 4) {
 				System.out.println("조회할 이름 => ");
 				String name = scn.nextLine();
-				service.findFriend(null);
+				
+				Friend searchFriend = service.findFriend(name); //이게 뭐야
+	//			service.findFriend(null);
+				if (searchFriend != null) { //
+					System.out.println(searchFriend.toString());//
+				} else {//
+					System.out.println("잘못된 입력입니다.");//
+				}//
+				
+				
 			} else {
 				System.out.println("프로그램을 종료합니다.");
 				break;

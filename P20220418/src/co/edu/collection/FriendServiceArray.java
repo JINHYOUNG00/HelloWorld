@@ -7,15 +7,15 @@ import co.edu.friend.Friend;
 //배열 기능 활용
 public class FriendServiceArray implements FriendService {
 	Friend[] friends = new Friend[10];
-	Scanner scn = new Scanner(System.in);
+	
 
 	@Override
 	public void addFriend(Friend friend) {
-
+		
 		for (int i = 0; i < friends.length; i++) {
 			if (friends[i] == null) {
 				friends[i] = friend;
-				break;
+				break; //return;
 			}
 		}
 
@@ -23,24 +23,19 @@ public class FriendServiceArray implements FriendService {
 
 	@Override
 	public void modFriend(Friend friend) {
-		System.out.print("수정할 친구 이름=> ");
+		System.out.print("수정될 친구 이름=> ");
 		String fName2 = scn.nextLine();
-		System.out.print("수정할 친구 연락처=> ");
+		System.out.print("수정될 친구 연락처=> ");
 		String fPhone2 = scn.nextLine();
-		Friend modFriend = new Friend(fName2, fPhone2)
+		Friend modFriend = new Friend(fName2, fPhone2);
 		for (int i = 0; i < friends.length; i++) {
-			if (friends[i].getName().equals(fName) && friends[i].getPhoneNum().equals(fPhone)) {
-				fName = fName2;
-				fPhone = fPhone2;
+			if (friends[i] != null && friends[i].getName().equals(friend.getName()) && friends[i].getPhoneNum().equals(friend.getName())) {
+				friends[i] = modFriend;
 			}
+		
 		}
-		Friend a = new Friend(fName, fPhone);
-		for (int i = 0; i < friends.length; i++) {
-			if (friends[i] != null) {
-			friends[i] = a;
-			}
-		}
-
+		System.out.println("수정 완료");
+		System.out.println();
 	}
 
 	@Override
@@ -51,8 +46,8 @@ public class FriendServiceArray implements FriendService {
 				friends[i] = null;
 			}
 		}
-
-
+		System.out.println("삭제 완료");
+		System.out.println();
 	}
 
 	@Override
