@@ -34,45 +34,47 @@ public class Practice {
 					break;
 				} else {
 					System.out.println("오답입니다.");
-					for (int j = 0; j<5; j++) {
-						if (j+1 == 1) {
-							if(intAry[j]!=0) {
-							intAry2[j] = intAry[j];
-							System.out.print("["+ intAry2[j]+"]");
-							} else if (intAry[j]==0) {
+					for (int j = 0; j < 5; j++) {
+						intAry2[j] = intAry[j];
+						if (intAry2[j] != 0) {
+							System.out.print("[" + intAry2[j] + "]");
+
+						} else {
 							System.out.print("[*]");
-							}
-						} else if (j+1 == 2) {
-							if(intAry[j]!=0) {
-							intAry2[j] = intAry[j];
-							System.out.print("["+ intAry2[j]+"]");
-							} else {
-							System.out.print("[*]");
-							}
-						} else if (j+1 == 3) {
-							if(intAry[j]!=0) {
-							intAry2[j] = intAry[j];
-							System.out.print("["+ intAry2[j]+"]");
-							} else {
-							System.out.print("[*]");
-							}
-						} else if(j+1 == 4) {
-							if(intAry[j]!=0) {
-							intAry2[j] = intAry[j];
-							System.out.print("["+ intAry2[j]+"]");
-							} else {
-							System.out.print("[*]");
-							}
-						} else if (j+1 == 5) {
-							if(intAry[j]!=0) {
-							intAry2[j] = intAry[j];
-							System.out.print("["+ intAry2[j]+"]");
-							} else {
-							System.out.print("[*]");
-							}
-						}  
+						}
 					}
-					System.out.println();
+
+//						} else if (j+1 == 2) {
+//							intAry2[j] = intAry[j];
+//							if(intAry2[j]!=0) {
+//							System.out.print("["+ intAry2[j]+"]");
+//							} else {
+//							System.out.print("[*]");
+//							}
+//						} else if (j+1 == 3) {
+//							intAry2[j] = intAry[j];
+//							if(intAry2[j]!=0) {
+//							System.out.print("["+ intAry2[j]+"]");
+//							} else {
+//							System.out.print("[*]");
+//							}
+//						} else if(j+1 == 4) {
+//							intAry2[j] = intAry[j];
+//							if(intAry2[j]!=0) {
+//							System.out.print("["+ intAry2[j]+"]");
+//							} else {
+//							System.out.print("[*]");
+//							}
+//						} else if (j+1 == 5) {
+//							intAry2[j] = intAry[j];
+//							if(intAry2[j]!=0) {
+//							System.out.print("["+ intAry2[j]+"]");
+//							} else {
+							System.out.print("[*]");
+							
+//						}  
+//					}
+//					System.out.println();
 //					if (input == 1) {
 //						intAry2 = intAry;
 //						System.out.println("[" + intAry2[input - 1] + "],[*],[*],[*],[*]");
