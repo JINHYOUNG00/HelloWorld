@@ -9,14 +9,24 @@ public class Friend {
 	private String name;
 	private String phoneNum;
 
+	private Gender gender; // MEN, WOMEN
+
 	// 부모 생성자
 	protected Friend() {
-		
+
 	}
+
 	public Friend(String name, String phoneNum) {
 		super();
 		this.name = name;
 		this.phoneNum = phoneNum;
+	}
+
+	public Friend(String name, String phoneNum, Gender gender) {
+		super();
+		this.name = name;
+		this.phoneNum = phoneNum;
+		this.gender = gender;
 	}
 
 	// 메소드(게터엔 세터포함)
@@ -27,6 +37,7 @@ public class Friend {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getPhoneNum() {
 		return phoneNum;
 	}
@@ -35,10 +46,18 @@ public class Friend {
 		this.phoneNum = phoneNum;
 	}
 
+	public Gender getGender() { // enum Gender 타입.
+		return gender;
+	}
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+
 	// toString 생성
 	@Override
 	public String toString() {
-		return "Friend [name=" + name + ", phoneNum=" + phoneNum + "]";
+		return "Friend [이름= " + name + ", 전화번호= " + phoneNum +" 성별= " + gender+"]";
 	}
 
 }

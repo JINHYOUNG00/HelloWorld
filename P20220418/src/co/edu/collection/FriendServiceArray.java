@@ -1,8 +1,10 @@
 package co.edu.collection;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import co.edu.friend.Friend;
+import co.edu.friend.Gender;
 
 //배열 기능 활용
 public class FriendServiceArray implements FriendService {
@@ -29,7 +31,7 @@ public class FriendServiceArray implements FriendService {
 		String fPhone2 = scn.nextLine();
 		Friend modFriend = new Friend(fName2, fPhone2);
 		for (int i = 0; i < friends.length; i++) {
-			if (friends[i] != null && friends[i].getName().equals(friend.getName()) && friends[i].getPhoneNum().equals(friend.getName())) {
+			if (friends[i] != null && friends[i].getName().equals(friend.getName()) && friends[i].getPhoneNum().equals(friend.getPhoneNum())) {
 				friends[i] = modFriend;
 			}
 		
@@ -58,6 +60,18 @@ public class FriendServiceArray implements FriendService {
 				System.out.println(friends[i].toString());
 			}
 		}
+		return null;
+	}
+
+	@Override
+	public ArrayList<Friend> findGender(Gender gender) {
+		for(int i = 0; i<friends.length;i++) {
+			if(friends[i] != null && friends[i].getGender() == gender) {
+				System.out.println(friends[i].toString());
+			}
+		}
+
+		
 		return null;
 	}
 
