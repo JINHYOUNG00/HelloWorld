@@ -1,4 +1,4 @@
-package co.edu.nested;
+package co.edu.board;
 
 import java.util.ArrayList;
 import java.util.Scanner;

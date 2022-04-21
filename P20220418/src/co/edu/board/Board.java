@@ -1,4 +1,6 @@
-package co.edu.nested;
+package co.edu.board;
+
+import java.time.LocalDate;
 
 public class Board {
 	//필드
@@ -6,7 +8,7 @@ public class Board {
 	String postName;
 	String content;
 	String writer;
-	String writeDate;
+	LocalDate writeDate = LocalDate.now();
 	
 	//생성자
 	public Board(int postNo,String postName, String content) {
@@ -18,13 +20,13 @@ public class Board {
 		this.postName = postName;
 		this.content = content;
 	}
-	public Board(String postName, String content, String writer, String writeDate) {
+	public Board(int postNo, String postName, String content, String writer) {
 		super();
+
 		this.postNo = postNo;
 		this.postName = postName;
 		this.content = content;
 		this.writer = writer;
-		this.writeDate = writeDate;
 	}
 	
 	
