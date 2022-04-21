@@ -27,6 +27,8 @@ public class StringExample {
 			String sex = ssn.charAt(6)+"";
 			String sex3 = null;
 			int sex2 = 0;
+			int bMonth2 = Integer.parseInt(bMonth);
+			int bDay2 = Integer.parseInt(bDay);
 			
 			if (ssn.indexOf("-") != -1) { // indexOf - 문자열에 해당 문자가 있는지 여부.
 				sex = ssn.charAt(7)+"";
@@ -35,9 +37,19 @@ public class StringExample {
 				sex = ssn.charAt(6)+"";
 				sex2 = Integer.parseInt(sex);
 			}
-		
 			
-			if (Integer.parseInt(bYear) > 50) {
+			
+				if(ssn.indexOf("-") != -1 && bMonth2 < 10) {
+					bMonth2 = Integer.parseInt(bMonth);
+				}
+				if(ssn.indexOf("-") != -1 && bDay2 < 10) {
+					bDay2 = Integer.parseInt(bDay);
+				}
+			
+			
+				
+			
+			if (Integer.parseInt(bYear) > 50) { // 99년생까지
 				if (sex2 == 1) {
 					sex3 = "남자";
 				} else if (sex2 == 2) {
@@ -45,7 +57,7 @@ public class StringExample {
 				} else {
 					System.out.println("잘못된 입력");
 				}
-			}else if (Integer.parseInt(bYear) < 50)
+			}else if (Integer.parseInt(bYear) < 50) {//00년생부터
 				if (sex2 == 3) {
 					sex3 = "남자";
 				} else if (sex2 == 4) {
@@ -53,17 +65,17 @@ public class StringExample {
 				} else {
 					System.out.println("잘못된 입력");
 				}
-			
+			}
 		
-		return bYear+"년"+bMonth+"월"+bDay+"일 생 " +sex3+"입니다.";
+		return bYear+"년"+bMonth2+"월"+bDay2+"일 생 " +sex3+"입니다.";
 //		return "95년생 4월 5일 생, 여자입니다.";
 	}
 		
+}	
 		
 		
 		
-		
+
 	
 	
-	
-}
+
